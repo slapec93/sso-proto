@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# User.create! :email => 'gergely.bekesi@bitrise.io', :password => 'topsecret'
+u = User.new(email: 'gergely.bekesi@bitrise.io')
+u.password = 'asdf1234'
+u.save!
