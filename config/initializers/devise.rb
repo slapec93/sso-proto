@@ -323,11 +323,11 @@ Devise.setup do |config|
   # Configure with your SAML settings (see ruby-saml's README for more information: https://github.com/onelogin/ruby-saml).
   config.saml_configure do |settings|
     # assertion_consumer_service_url is required starting with ruby-saml 1.4.3: https://github.com/onelogin/ruby-saml#updating-from-142-to-143
-    settings.assertion_consumer_service_url     = "http://localhost:3010/users/saml/auth"
+    settings.assertion_consumer_service_url     = "https://sso-proto.herokuapp.com//users/saml/auth"
     settings.name_identifier_format             = "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
-    settings.issuer                             = "http://localhost:3010/saml/metadata"
-    settings.idp_sso_target_url                 = "http://localhost/simplesaml/www/saml2/idp/SSOService.php"
-    settings.idp_cert_fingerprint               = "00:A1:2B:3C:44:55:6F:A7:88:CC:DD:EE:22:33:44:55:D6:77:8F:99"
+    settings.issuer                             = "https://sso-proto.herokuapp.com//users/saml/metadata"
+    settings.idp_sso_target_url                 = "https://bitrise.okta.com/app/bitrise_ssoproto_1/exk561rk8B7TnmiP5356/sso/saml"
+    settings.idp_cert_fingerprint               = "E0:D5:D0:87:6E:5E:98:0C:DA:A4:16:9D:0B:57:BA:9C:0B:ED:E9:CC"
     settings.idp_cert_fingerprint_algorithm     = "http://www.w3.org/2000/09/xmldsig#sha1"
   end
 end
